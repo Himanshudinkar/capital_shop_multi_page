@@ -1,0 +1,1009 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+// flex function
+@import "function";
+//primarycolor  variable
+@import "variable";
+
+// header section start
+ #click {
+  display: none;
+ }
+
+.fixed-navbar{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+//first colume
+.first-column {
+  @include flex(row, space-around, center);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.297);
+  height: 40px;
+  background-color: white;
+
+  //first nav
+  .nav-first nav ul {
+    @include flex(row, center, center);
+    gap: 20px;
+    margin-right: 15px;
+
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #292621;
+      font-size: 14px;
+      font-family: "Jost", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+    }
+  }
+  //wishlink
+  .wishlink {
+    @include flex(row, center, center);
+    gap: 15px;
+    margin-left: 15px;
+
+    p {
+      text-decoration: none;
+      color: #292621;
+      font-size: 14px;
+      font-family: "Jost", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+      border-right: 1px solid rgba(0, 0, 0, 0.29);
+      padding-right: 10px;
+    }
+    i {
+      transition-property: all;
+      transition-duration: 1s;
+      transition-timing-function: ease;
+      transition-delay: 1s;
+
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+// first-column end
+
+//second column
+.second-column {
+  @include flex(row, space-around, center);
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  width: 100%;
+  // position: fixed;
+
+  // nav second
+  .nav-second nav ul {
+    @include flex(row, center, center);
+    gap: 35px;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #141517;
+      font-size: 16px;
+      font-family: "Jost", sans-serif;
+      // font-optical-sizing: auto;
+      font-weight: bold;
+      font-style: normal;
+
+      &:hover {
+        color: $primarycolor;
+      }
+    }
+  }
+
+  /* media navbar */
+ label {
+  font-size: 30px;
+  display: none;
+ }
+
+/* media navbar */
+  // nav second end
+
+  //second-column-icon
+  .second-column-icone {
+    @include flex(row, center, center);
+    gap: 20px;
+
+    img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+  //second-column-icone end
+  //second column end
+}
+
+// third column start
+.third-column {
+  background-color: rgba(0, 0, 0, 0.895);
+  height: 40px;
+  margin-top: 120px;
+
+  p {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: "Jost", sans-serif;
+
+    a {
+      color: rgb(255, 166, 0);
+    }
+  }
+}
+//third column end
+
+// hero section
+.hero {
+  height: 100vh;
+  background-image: url(/Images/pixelcut-export\ \(1\).jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // margin-top: 100px;
+
+  //main-section
+  .main-content {
+    @include flex(column, center, center);
+    height: 500px;
+    // position:absolute;
+    // margin-left: 20px;
+    margin-right: 700px;
+
+    #p1 {
+      font-style: italic;
+      font-size: 56px;
+      color: $primarycolor;
+      font-family: "Clicker Script", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    #p2{
+      font-size: 48px;
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+    }
+
+    #p3{
+      color: #74706B;
+      font-size: 20px;
+      font-family: "Jost", sans-serif;
+      width: 500px;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+      background-color: #292621;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-top: 30px;
+      border: 1px solid #292621;
+
+       &:hover{
+        background-color: white;
+        color: #292621;
+      }
+    }
+  }
+  //main-section end
+}
+// hero section end
+//header section end
+
+//shop section start
+// m-w-b section start
+.m-w-b{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  // height: 100vh;
+  margin: 50px;
+  padding: 10px;
+
+  .fashion{
+    height: 324px;
+    width: 370px;
+    border: 1px solid #292621;
+   a{
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function:ease-in-out;
+    transition-delay: 0s;
+
+    &:hover{
+      // transform: scaleY(1.2);
+      transform: translateY(50px);
+    }
+  }
+  }
+  .fashion a{
+    color: white;
+    font-family:"Jost", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-decoration: none;
+
+
+  }
+  .men{
+    background-image: url(/Images/pixelcut-export\ \(3\).jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    
+  }
+  .women{
+    background-image: url(/Images/pixelcut-export\ \(2\).jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+  }
+  .baby{
+    background-image: url(/Images/pixelcut-export\ \(4\).jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+  }
+}
+// m-w-b section end
+
+// nav-third
+.nav-third{
+  @include flex(row,space-between,center);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.235);
+  padding-bottom: 10px;
+
+  
+  h1{
+      color: #141517;
+      font-size: 28px;
+      font-family: "Jost", sans-serif;
+      font-weight: 500;
+      margin-left: 50px;
+      margin-bottom: 30px;
+  }
+
+  nav ul{
+    @include flex(row, center, center);
+    gap: 20px;
+    margin-right: 50px;
+
+    li{
+      list-style: none;
+    }
+
+    a{
+      text-decoration: none;
+      color: #141517;
+      font-size: 18px;
+      font-family: "Jost", sans-serif;
+      // font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+
+      &:hover{
+        color: $primarycolor;
+        border-bottom: 2px solid $primarycolor;
+      }
+
+      span{
+        color: $primarycolor;
+        border-bottom: 2px solid $primarycolor;
+      }
+    }
+  }
+}
+// nav third ends
+
+//trendin section 
+.trending{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 10px;
+  padding: 50px;
+  gap: 10px;
+
+  .first-trending{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+
+    img{
+      height: 300px;
+      width: 250px;
+
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+
+    p{
+      font-family: "Jost", sans-serif;
+      color: #292621c0;
+
+      &:hover{
+        color: $primarycolor;
+      }
+
+      span{
+        color: red;
+      }
+    }
+    a{
+      text-decoration: none;
+      border: 1px solid black;
+      padding: 10px 60px 10px 60px;
+      color: white;
+      background-color: #292621;
+      font-family: "Jost", sans-serif;
+
+      &:hover{
+        background-color: white;
+        color: #292621;
+      }
+    }
+  }
+}
+//trending section end
+//shop section end
+
+// customer section start
+//customer-reviwe
+.customer{
+  @include flex(column,center,center);
+  gap: 30px;
+  margin-top: 50px;
+  background-color:#f3ead875;
+  height: 70vh;
+
+  h1{
+    font-family: "Jost", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  
+  p{
+     font-family: "Jost", sans-serif;
+     color:#74706B;
+     font-size: 20px;
+  }
+
+  .customer-image{
+    @include flex(row,center,center);
+    gap: 10px;
+
+    img{
+      height: 50px;
+      width: 50px;
+      border-radius: 360px;
+    }
+
+    p{
+      font-family: "Jost", sans-serif;
+      color:#000000;
+      font-size: 16px;
+
+      span{
+          font-family: "Jost", sans-serif;
+          color:#0000009c;
+          font-size: 16px;
+          font-weight: 500;
+      }
+    }
+  }
+}
+//customer reviwe end
+
+//like section
+
+h1{
+      color: #141517;
+      font-size: 28px;
+      font-family: "Jost", sans-serif;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 50px;
+}
+
+.like{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin-top: 10px;
+  padding: 50px;
+  gap: 10px;
+
+  .first-like{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+
+    img{
+      height: 200px;
+      width: 150px;
+      display: block;
+
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+
+    p{
+      font-family: "Jost", sans-serif;
+      color: #292621c0;
+
+      &:hover{
+        color: $primarycolor;
+      }
+
+      span{
+        color: red;
+      }
+    }
+    a{
+      text-decoration: none;
+      border: 1px solid black;
+      padding: 10px 60px 10px 60px;
+      color: white;
+      background-color: #292621;
+      font-family: "Jost", sans-serif;
+
+      &:hover{
+        background-color: white;
+        color: #292621;
+      }
+    }
+  }
+}
+//like section end
+
+//big icone 
+
+.big-icone{
+  @include flex(row,center,center);
+  margin-top: 50px;
+  background-color: #f3ead875;
+
+  .big{
+    @include flex(column,center,center);
+    gap: 15px;
+    padding: 50px;
+
+    img{
+      width: 68.74;
+      height: 43.48;
+    }
+
+    p{
+      color:#2B2B2B;
+      font-family: "Jost", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    pre{
+      color:#57667e;
+      font-family: "Jost", sans-serif;
+      font-size: 16px;
+    }
+  }
+
+}
+// big icone end
+//customer section end
+
+//footer section start
+footer{
+  background-color: #141515;
+  margin-top: 50px;
+}
+// subscribe
+.subscribe{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.258);
+
+  //newsletter
+  .newsletter{
+    @include flex(column,center,center);
+    gap: 10px;
+
+    h4{
+      color:#FFFFFF;
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 25px;
+    }
+
+    p{
+      color:#FFFFFF;
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
+  //newsletter end
+
+  .form{
+
+    input{
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-right:150px;
+      padding-left: 20px;
+      color:black;
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      border: 1px solid black;
+      }
+
+      button{
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 25px;
+        padding-right: 25px;
+        color:rgb(255, 255, 255);
+        font-family: "Jost", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        border: 1px solid black;
+        background-color: $primarycolor;
+      }
+    }
+
+    .form-icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+// subscribe end
+
+//contact
+.contact{
+  @include flex(row,space-around,center);
+  margin-top: 50px; 
+  padding-bottom: 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.258);
+
+
+  .contact-logo{
+    margin-bottom: 150px
+  }
+
+  .contact-content{
+    @include flex(column,center,start);
+    gap: 10px;
+
+    p{
+      color:#FFFFFF;
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    a{
+      text-decoration: none;
+      color:#ffffffb0;
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 15px; 
+
+      &:hover{
+        text-decoration: underline; 
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.last{
+  padding:5px;
+  h5{
+    color:#FFFFFF;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+   
+    span{
+      color: $primarycolor;
+    }
+}
+}
+
+//contact end
+
+//footer section end
+
+//media quary tablet
+
+@media screen and (max-width: 768px){
+//navbar section
+
+.fixed-navbar{
+  position: static;
+  // width: 100%;
+  // top: 0px;
+}
+
+.second-column{
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-column .second-column-icone{
+  display: none;
+}
+
+.second-column .second-column-img{
+  margin-left: 20px;
+}
+
+.second-column .nav-second label {
+    display: block;
+    margin-right: 20px;
+  }
+
+.second-column  .nav-second nav ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    background-color: #4c4c4c;
+    width: 100%;
+    height: 220px;
+    gap: 20px;
+    display: none;
+}
+.second-column  .nav-second nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-right: 30px;
+    gap: 35px;
+}
+
+.second-column  .nav-second nav ul li a{
+  color: white;
+  margin: 3px;
+  padding: 3px;
+}
+
+ #click:checked ~ header .second-column  .nav-second nav ul{
+  display: block;
+ }
+
+.third-column{
+  margin-top: 0px;
+}
+//navbar section end
+
+.hero .main-content{
+  margin-right: 200px;
+}
+//m-w-b section
+.m-w-b{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   justify-content: space-around;
+  // height: 100vh;
+   margin: 50px;
+   padding: 10px;
+   gap: 20px;
+
+   .fashion{
+    height: 350px;
+    width: 320px;
+    border: 1px solid #292621;
+    }
+    
+   .baby{
+    display: none;
+
+   }
+}
+//m-w-b section
+
+//trending section
+.trending{
+  grid-template-columns: 50% 50%;
+
+}
+//trending section end
+
+// like section
+.like{
+  grid-template-columns: 50% 50%;
+}
+// like section end
+
+// big-icone section
+.big-icone{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+//big-icone section end
+
+//footer section
+.subscribe{
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+
+  .contact-content p{
+    margin-top: 26px;
+  }
+  .shop-men{
+    position: relative;
+    left: 470px;
+  }
+}
+//footer section end
+}
+//media quary tablet end
+
+// media quary mobile view
+
+
+@media screen and (max-width: 426px){
+
+  //navbar section
+  .first-column{
+    display: none;
+  }
+  .third-column{
+    height: 57px;
+  }
+  .second-column  .nav-second nav ul{
+    top: 80px;
+  }
+  //navbar section end
+
+  //main-section
+  .hero .main-content {
+    @include flex(column, center, center);
+    height: 400px;
+    position:absolute;
+    margin-top: 70px;
+    margin-left: 20px;
+    
+
+    #p1 {
+      font-size: 40px;
+    }
+
+    #p2{
+      font-size: 35px;
+    }
+
+    #p3{
+      font-size: 15px;
+      width: 300px;
+    }
+
+  }
+  //main-section end
+
+//m-w-b section
+.m-w-b{
+   display: grid;
+   grid-template-columns: 50%;
+   justify-content: center;
+  // height: 100vh;
+  //  margin: 50px;
+  //  padding: 10px;
+  margin-right: 350px;
+   gap: 20px;
+
+   .fashion{
+    height: 350px;
+    width: 320px;
+    border: 1px solid #292621;
+    }
+    
+   .baby{
+    display: none;
+
+   }
+}
+//m-w-b section
+
+//nav third
+.nav-third{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+
+
+   h1{
+      color: #141517;
+       font-size: 28px;
+       font-family: "Jost", sans-serif;
+       font-weight: 500;
+       margin-right: 50px;
+
+   }
+   nav ul{
+    margin-right: 0px;
+   }
+}
+//nav third end
+
+//trending section
+.trending{
+  grid-template-columns: 100%;
+
+}
+//trending section end
+
+// like section
+.like{
+  grid-template-columns: 100%;
+}
+// like section end
+
+// big-icone section
+.big-icone{
+  display: grid;
+  grid-template-columns: 100%;
+}
+//big-icone section end
+
+
+//footer section
+.subscribe{
+  flex-direction: column;
+  gap: 20px;
+
+  .form{
+
+    input{
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-right:251px;
+      padding-left: 20px;
+      }
+
+      button{
+        margin-top: 20px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 177px;
+        padding-right: 177px;
+      }
+    }
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+  border-bottom: 0px;
+
+  .contact-logo{
+    margin-bottom: 0px;
+    margin-right: 20px;
+  }
+
+  .contact-content{
+    margin-bottom: 0px;
+  }
+  .shop-men{
+    position: static;
+  }
+}
+//footer section end
+
+//customer-reviwe
+.customer{
+  @include flex(column,center,center);
+  gap: 30px;
+  margin-top: 50px;
+  background-color:#f3ead875;
+  height: 70vh;
+
+  h1{
+    font-family: "Jost", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  
+  p{
+     font-family: "Jost", sans-serif;
+     color:#74706B;
+     font-size: 15px;
+  }
+
+  .customer-image{
+    @include flex(row,center,center);
+    gap: 10px;
+
+    img{
+      height: 50px;
+      width: 50px;
+      border-radius: 360px;
+    }
+
+    p{
+      font-family: "Jost", sans-serif;
+      color:#000000;
+      font-size: 16px;
+
+      span{
+          font-family: "Jost", sans-serif;
+          color:#0000009c;
+          font-size: 16px;
+          font-weight: 500;
+      }
+    }
+  }
+}
+//customer reviwe end
+}
+
+// media quary mobile view end
